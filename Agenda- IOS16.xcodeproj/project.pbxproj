@@ -11,7 +11,7 @@
 		C8546A4C2A5E626800CD02EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8546A4B2A5E626800CD02EB /* SceneDelegate.swift */; };
 		C8546A4E2A5E626800CD02EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8546A4D2A5E626800CD02EB /* ViewController.swift */; };
 		C8546A512A5E626800CD02EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8546A4F2A5E626800CD02EB /* Main.storyboard */; };
-		C8546A542A5E626800CD02EB /* Agenda__IOS16.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8546A522A5E626800CD02EB /* Agenda__IOS16.xcdatamodeld */; };
+		C8546A542A5E626800CD02EB /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8546A522A5E626800CD02EB /* DataModel.xcdatamodeld */; };
 		C8546A562A5E626B00CD02EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8546A552A5E626B00CD02EB /* Assets.xcassets */; };
 		C8546A592A5E626B00CD02EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8546A572A5E626B00CD02EB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -60,14 +60,38 @@
 			children = (
 				C8546A492A5E626800CD02EB /* AppDelegate.swift */,
 				C8546A4B2A5E626800CD02EB /* SceneDelegate.swift */,
-				C8546A4D2A5E626800CD02EB /* ViewController.swift */,
-				C8546A4F2A5E626800CD02EB /* Main.storyboard */,
+				C8546A612A5E62F400CD02EB /* Controllers */,
+				C8546A602A5E62E000CD02EB /* Data Model */,
+				C8546A622A5E631C00CD02EB /* Views */,
 				C8546A552A5E626B00CD02EB /* Assets.xcassets */,
 				C8546A572A5E626B00CD02EB /* LaunchScreen.storyboard */,
 				C8546A5A2A5E626B00CD02EB /* Info.plist */,
-				C8546A522A5E626800CD02EB /* Agenda__IOS16.xcdatamodeld */,
 			);
 			path = "Agenda- IOS16";
+			sourceTree = "<group>";
+		};
+		C8546A602A5E62E000CD02EB /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8546A522A5E626800CD02EB /* DataModel.xcdatamodeld */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		C8546A612A5E62F400CD02EB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C8546A4D2A5E626800CD02EB /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C8546A622A5E631C00CD02EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8546A4F2A5E626800CD02EB /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +167,7 @@
 			files = (
 				C8546A4E2A5E626800CD02EB /* ViewController.swift in Sources */,
 				C8546A4A2A5E626800CD02EB /* AppDelegate.swift in Sources */,
-				C8546A542A5E626800CD02EB /* Agenda__IOS16.xcdatamodeld in Sources */,
+				C8546A542A5E626800CD02EB /* DataModel.xcdatamodeld in Sources */,
 				C8546A4C2A5E626800CD02EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,13 +388,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C8546A522A5E626800CD02EB /* Agenda__IOS16.xcdatamodeld */ = {
+		C8546A522A5E626800CD02EB /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				C8546A532A5E626800CD02EB /* Agenda__IOS16.xcdatamodel */,
 			);
 			currentVersion = C8546A532A5E626800CD02EB /* Agenda__IOS16.xcdatamodel */;
-			path = Agenda__IOS16.xcdatamodeld;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
