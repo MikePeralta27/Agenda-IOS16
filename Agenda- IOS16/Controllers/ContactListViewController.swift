@@ -11,6 +11,8 @@ import CoreData
 class ContactListViewController: UITableViewController {
     
     let contacts = [Contact]()
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +37,49 @@ class ContactListViewController: UITableViewController {
     
     
     
+    //MARK: - Data Manipulation Methods
+    
     
     
     
     //MARK: - Add New contact
     
-
-
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        var nameTextField = UITextField()
+        var lastNameTextField = UITextField()
+        var phoneTextField = UITextField()
+        
+        let alert = UIAlertController(title: "Add new contact", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Category", style: .default){ (action) in
+            
+            let newContact = Contact(context: self.context)
+            newContact.name = nameTextField.text!
+            newContact.lastName = lastNameTextField.text!
+            newContact.phone = phoneTextField.text!
+            
+            // call save category method
+            
+            
+        }
+        
+        alert.addAction(action)
+        alert.addTextField{ (nameField) in
+            nameTextField = nameField
+            nameTextField.placeholder = "New contact name"
+        }
+        alert.addTextField{ (lastNameField) in
+            lastNameTextField = lastNameField
+            lastNameField.placeholder = "New contact last name"
+        }
+        alert.addTextField{ (phoneField) in
+            phoneTextField = phoneField
+            phoneTextField.placeholder = "New contact phone number"
+        }
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
 
