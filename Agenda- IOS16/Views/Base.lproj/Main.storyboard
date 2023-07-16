@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Agenda-->
+        <!--AGENDA-->
         <scene sceneID="tCy-Fn-KPm">
             <objects>
                 <tableViewController id="HX3-IB-UkK" customClass="ContactListViewController" customModule="Agenda__IOS16" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="HX3-IB-UkK" id="b5P-9x-hr3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Agenda" id="48i-AI-GmD">
+                    <navigationItem key="navigationItem" title="AGENDA" id="48i-AI-GmD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vwF-Ks-exV">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -54,10 +54,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wTM-YV-41n">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.22540795051285292" green="0.65888134819088562" blue="0.22414224520642198" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" systemColor="systemMintColor"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>

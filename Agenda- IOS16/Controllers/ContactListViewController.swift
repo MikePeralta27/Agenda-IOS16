@@ -29,7 +29,7 @@ class ContactListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         
-        cell.textLabel?.text = contacts[indexPath.row].name! + " " + contacts[indexPath.row].lastName!
+        cell.textLabel?.text = (contacts[indexPath.row].name ?? " ") + " " + (contacts[indexPath.row].lastName ?? "")
         
         return cell
     }
