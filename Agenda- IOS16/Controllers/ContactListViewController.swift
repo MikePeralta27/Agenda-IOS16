@@ -10,13 +10,14 @@ import CoreData
 
 class ContactListViewController: UITableViewController {
     
-    let contacts = [Contact]()
+    var contacts = [Contact]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        loadContact()
     }
     
     //MARK: - TableView Datasource Methods
@@ -28,17 +29,36 @@ class ContactListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         
-        cell.textLabel?.text = contacts[indexPath.row].name
+        cell.textLabel?.text = contacts[indexPath.row].name! + " " + contacts[indexPath.row].lastName!
         
         return cell
     }
 
     //MARK: - Tableview Delegate Methods
-    
-    
+
     
     //MARK: - Data Manipulation Methods
     
+    func saveContact(){
+        do {
+            try context.save()
+        } catch {
+            print("Error saving Context \(error)")
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+    func loadContact(){
+        let request: NSFetchRequest<Contact> = Contact.fetchRequest()
+        
+        do {
+            contacts = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+        }
+        self.tableView.reloadData()
+    }
     
     
     
@@ -52,14 +72,14 @@ class ContactListViewController: UITableViewController {
         
         let alert = UIAlertController(title: "Add new contact", message: "", preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "Add Category", style: .default){ (action) in
+        let action = UIAlertAction(title: "Add Contact", style: .default){ (action) in
             
             let newContact = Contact(context: self.context)
             newContact.name = nameTextField.text!
             newContact.lastName = lastNameTextField.text!
             newContact.phone = phoneTextField.text!
             
-            // call save category method
+            self.saveContact()
             
             
         }
