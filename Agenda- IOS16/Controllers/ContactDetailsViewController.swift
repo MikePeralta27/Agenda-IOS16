@@ -9,6 +9,13 @@ import UIKit
 
 class ContactDetailsViewController: UIViewController {
 
+    var selectedContact = Contact? {
+        didSet{
+            //create method
+       //     loadContactDetails()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

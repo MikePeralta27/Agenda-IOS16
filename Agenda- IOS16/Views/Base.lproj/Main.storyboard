@@ -40,7 +40,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="AddContact" id="cF2-hy-s2v"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="viewContact" id="cF2-hy-s2v"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6k-Nq-BWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

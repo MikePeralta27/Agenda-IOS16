@@ -35,6 +35,18 @@ class ContactListViewController: UITableViewController {
     }
 
     //MARK: - Tableview Delegate Methods
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "viewContact", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ContactDetailsViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.selectedContact = contacts[indexPath.row]
+        }
+    }
 
     
     //MARK: - Data Manipulation Methods
