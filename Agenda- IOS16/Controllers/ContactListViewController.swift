@@ -90,6 +90,7 @@ class ContactListViewController: UITableViewController {
             newContact.name = nameTextField.text!
             newContact.lastName = lastNameTextField.text!
             newContact.phone = phoneTextField.text!
+            self.contacts.append(newContact)
             
             self.saveContact()
             
