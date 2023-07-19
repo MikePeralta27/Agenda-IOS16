@@ -11,7 +11,6 @@ import CoreData
 class ContactListViewController: UITableViewController {
     
     var contacts = [Contact]()
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
@@ -48,7 +47,6 @@ class ContactListViewController: UITableViewController {
         }
     }
 
-    
     //MARK: - Data Manipulation Methods
     
     func saveContact(){
@@ -73,7 +71,6 @@ class ContactListViewController: UITableViewController {
     }
     
     
-    
     //MARK: - Add New contact
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -93,8 +90,6 @@ class ContactListViewController: UITableViewController {
             self.contacts.append(newContact)
             
             self.saveContact()
-            
-            
         }
         
         alert.addAction(action)
@@ -115,4 +110,3 @@ class ContactListViewController: UITableViewController {
     }
     
 }
-
